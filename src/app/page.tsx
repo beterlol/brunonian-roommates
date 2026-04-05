@@ -71,11 +71,11 @@ export default async function Home() {
 
         {/* Social proof row */}
         <div className="mt-14 flex items-center justify-center gap-8 text-sm text-[#4e3629]/50">
-          <span>🏠 Dorm matching</span>
+          <span>Dorm matching</span>
           <span className="w-px h-4 bg-[#e8c9a5]" />
-          <span>💬 Private chat</span>
+          <span>Private chat</span>
           <span className="w-px h-4 bg-[#e8c9a5]" />
-          <span>🔒 Brown only</span>
+          <span>Brown only</span>
         </div>
       </div>
     </div>

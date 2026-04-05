@@ -50,10 +50,10 @@ export default async function ProfilePage({
   ].filter(Boolean)
 
   const lifestyle = [
-    profile.sleep_schedule && `🌙 ${profile.sleep_schedule}`,
-    profile.cleanliness && `🧹 ${profile.cleanliness}`,
-    profile.noise_level && `🔊 ${profile.noise_level}`,
-    profile.guests && `👥 Guests: ${profile.guests}`,
+    profile.sleep_schedule && `Sleep: ${profile.sleep_schedule}`,
+    profile.cleanliness && `Cleanliness: ${profile.cleanliness}`,
+    profile.noise_level && `Noise: ${profile.noise_level}`,
+    profile.guests && `Guests: ${profile.guests}`,
   ].filter(Boolean)
 
   return (
@@ -64,7 +64,7 @@ export default async function ProfilePage({
           {profile.photo_url ? (
             <Image src={profile.photo_url} alt={profile.name} fill className="object-cover" unoptimized />
           ) : (
-            <div className="flex items-center justify-center h-full text-7xl">👤</div>
+            <div className="flex items-center justify-center h-full text-5xl font-bold text-[#4e3629]/20">{profile.name.charAt(0).toUpperCase()}</div>
           )}
         </div>
 
@@ -112,7 +112,7 @@ export default async function ProfilePage({
 
           {isMatch && (
             <div className="mt-6 p-4 rounded-xl bg-[#f5e6d3] border border-[#e8c9a5] text-center">
-              <p className="text-[#4e3629] font-medium">🎉 You matched with {profile.name}!</p>
+              <p className="text-[#4e3629] font-medium">You matched with {profile.name}!</p>
               <a href="/matches" className="text-sm text-[#c4853a] hover:underline mt-1 inline-block">Go to matches →</a>
             </div>
           )}

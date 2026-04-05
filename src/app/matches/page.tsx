@@ -31,7 +31,6 @@ export default async function MatchesPage() {
 
       {enriched.length === 0 ? (
         <div className="text-center py-20">
-          <div className="text-5xl mb-4">💫</div>
           <p className="text-[#4e3629]/60 font-medium">No matches yet</p>
           <p className="text-sm text-[#4e3629]/40 mt-2">Start connecting with people in the discover feed</p>
           <Link href="/discover" className="mt-4 inline-block px-6 py-2.5 rounded-xl bg-[#4e3629] text-white text-sm font-medium hover:bg-[#3d2a20] transition-colors">
@@ -50,7 +49,7 @@ export default async function MatchesPage() {
                 {match.other.photo_url ? (
                   <Image src={match.other.photo_url} alt={match.other.name} fill className="object-cover" unoptimized />
                 ) : (
-                  <div className="flex items-center justify-center h-full text-2xl">👤</div>
+                  <div className="flex items-center justify-center h-full text-sm font-semibold text-[#4e3629]/30">{match.other.name.charAt(0).toUpperCase()}</div>
                 )}
               </div>
               <div className="flex-1 min-w-0">

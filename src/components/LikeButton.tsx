@@ -60,7 +60,7 @@ export default function LikeButton({ targetId, currentUserId, initialLiked, isMa
           : 'bg-[#4e3629] text-white hover:bg-[#3d2a20]'
       }`}
     >
-      {liked ? '💛 Liked' : '🤝 Connect'}
+      {liked ? 'Liked' : 'Connect'}
     </button>
   )
 }

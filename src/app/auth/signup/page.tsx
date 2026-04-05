@@ -45,7 +45,6 @@ export default function SignupPage() {
     return (
       <div className="flex items-center justify-center min-h-[calc(100vh-64px)] px-4">
         <div className="text-center max-w-sm">
-          <div className="text-4xl mb-4">📬</div>
           <h2 className="text-2xl font-bold text-[#2c1e17] mb-2">Check your email</h2>
           <p className="text-[#4e3629]/60">We sent a confirmation link to <strong>{email}</strong>. Click it to activate your account.</p>
         </div>

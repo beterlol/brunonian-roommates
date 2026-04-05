@@ -109,7 +109,6 @@ export default function DiscoverClient({ profiles, likedIds: initialLikedIds, cu
 
       {filtered.length === 0 ? (
         <div className="text-center py-20 text-[#4e3629]/40">
-          <div className="text-5xl mb-3">🔍</div>
           <p>No profiles match your filters</p>
         </div>
       ) : (
@@ -147,7 +146,7 @@ function ProfileCard({
           {profile.photo_url ? (
             <Image src={profile.photo_url} alt={profile.name} fill className="object-cover" unoptimized />
           ) : (
-            <div className="flex items-center justify-center h-full text-5xl">👤</div>
+            <div className="flex items-center justify-center h-full text-2xl font-semibold text-[#4e3629]/30">{profile.name.charAt(0).toUpperCase()}</div>
           )}
           {profile.school_year && (
             <span className="absolute top-3 left-3 px-2.5 py-1 text-xs rounded-full bg-white/90 text-[#4e3629] font-medium backdrop-blur-sm">
@@ -178,7 +177,7 @@ function ProfileCard({
               : 'bg-[#4e3629] text-white hover:bg-[#3d2a20]'
           }`}
         >
-          {loading ? '…' : liked ? '💛 Liked' : '🤝 Connect'}
+          {loading ? '…' : liked ? 'Liked' : 'Connect'}
         </button>
       </div>
     </div>

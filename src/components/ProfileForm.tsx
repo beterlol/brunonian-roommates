@@ -92,7 +92,7 @@ export default function ProfileForm({ initialData, userId, email }: Props) {
           {photoUrl ? (
             <Image src={photoUrl} alt="Profile" fill className="object-cover rounded-2xl" unoptimized />
           ) : (
-            <span className="text-3xl">📷</span>
+            <span className="text-xs text-[#4e3629]/40">Photo</span>
           )}
         </div>
         <div>
